@@ -1,9 +1,10 @@
 # Scripts To Rule Them All
 
-This is a set of boilerplate scripts describing the [normalized script pattern
-that GitHub uses in its projects](http://githubengineering.com/scripts-to-rule-them-all/). While these
-patterns can work for projects based on any framework or language, these
-particular examples are for a simple Ruby on Rails application.
+This is a set of boilerplate scripts describing the normalized script pattern
+that Axial uses in its projects, based on
+[GitHub's Scripts to Rule Them All](http://githubengineering.com/scripts-to-rule-them-all/).
+This is very much in alignment with [the DJB Way](http://thedjbway.b0llix.net/),
+and works particularly well with [daemontools](http://thedjbway.b0llix.net/daemontools.html).
 
 ## The Idea
 
@@ -61,7 +62,7 @@ state of the app into shape for the current version that is checked out.
 
 [`script/server`][server] is used to start the application.
 
-For a web application, this might start up any extra processes that the 
+For a web application, this might start up any extra processes that the
 application requires to run in addition to itself.
 
 [`script/update`][update] should be called ahead of any application booting to ensure that
@@ -108,3 +109,17 @@ the requested environment.
 [test]: script/test
 [cibuild]: script/cibuild
 [console]: script/console
+
+## Helper Scripts
+
+Helper scripts are also located in `./script`. The filename is prefaced with `_`, and they document what they do at the top of their file.
+
+## Implementation
+
+You can export these template files by checking out this project and then simply running:
+
+```bash
+cp -v -r ./script /path/to/your/repo/
+```
+
+(We would advocate using a `git submodule` checked out to a branch named after your project...but tracking branches and pushing changes into submodules sucks.)
