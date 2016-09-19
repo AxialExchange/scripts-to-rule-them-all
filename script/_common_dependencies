@@ -1,0 +1,14 @@
+#!/bin/bash -xu
+
+# This file is responsible for loading the common build dependencies among all the projects
+
+script=`dirname $0`
+
+# First things first, ensure we have the GNU readline, etc.
+# (This is assumed everywhere, and not necessarily true on OS-X.)
+"$script/_has_command" brew && ( "$script/_has_command" greadline || brew install coreutils )
+
+script=`$here/_scriptdir`
+
+# TODO Ensure we have git
+# TODO Ensure we hvae wget

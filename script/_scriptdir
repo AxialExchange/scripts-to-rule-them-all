@@ -1,0 +1,8 @@
+#!/bin/bash -exu
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+here=`dirname $0`
+here=`readlink -f -- $here`
+echo -n $here
+
+

@@ -1,0 +1,6 @@
+#!/bin/bash -exu
+
+# This tests whether or not we have the given command on the PATH
+# (or aliased, or whatever.)
+
+exec command -v $1 >/dev/null 2>&1
