@@ -116,6 +116,8 @@ Helper scripts are also located in `./script`. The filename is prefaced with `_`
 
 ## Implementation
 
+### Adding the Files to Your Project
+
 You can export these template files by checking out this project and then simply running:
 
 ```bash
@@ -123,3 +125,8 @@ cp -v -r ./script /path/to/your/repo/
 ```
 
 (We would advocate using a `git submodule` checked out to a branch named after your project...but tracking branches and pushing changes into submodules sucks.)
+
+### Global Dependencies
+
+You are expected to have one of `brew`, `apt`, or `yum` installed and on your path to run these scripts.
+
